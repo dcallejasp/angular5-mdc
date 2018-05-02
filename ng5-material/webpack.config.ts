@@ -17,7 +17,10 @@ module.exports = [{
                 },
                 { loader: 'extract-loader' },
                 { loader: 'css-loader' },
-                { loader: 'sass-loader' },
+                loader: 'sass-loader',
+                options: {
+                    includePaths: ['./node_modules']
+                }
             ]
         }]
     },

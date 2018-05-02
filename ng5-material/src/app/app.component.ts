@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
-import { SidenavOpenCloseExample } from './sidenav/app.sidenav';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   events = [];
 
-  constructor(side: SidenavOpenCloseExample) {
-    this.events = ["peras", "Manzanas", "uvas"];
+  constructor() {
   }
   
   answer: string = '';
