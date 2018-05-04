@@ -9,29 +9,46 @@
     <button mat-button>About</button>
     <button mat-button>Services</button>
     <button mat-button>Contact</button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voicemail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
 
+
 <mat-card>
-  <mat-form-field>
-    <input matInput [(ngModel)]="answer" placeholder="Who has the best dev tutorials?">
-  </mat-form-field>
-
-  <br>
-
-  <button mat-raised-button (click)="showAnswer()">Answer me</button>
-  <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  <app-new-component></app-new-component>
 </mat-card>
 
+<i class="mdc-icon-toggle material-icons" role="button" aria-pressed="false" aria-label="Add to favorites" tabindex="0" data-toggle-on='{"label": "Remove from favorites", "content": "favorite"}'
+  data-toggle-off='{"label": "Add to favorites", "content": "favorite_border"}' data-mdc-auto-init="MDCIconToggle">
+  favorite_border
+</i>
 
-<mat-card *ngIf="answerDisplay">
-  <h1>{{ answerDisplay }}, you're damn right.</h1>
-</mat-card>
 
   <button class="foo-button mdc-button">
     Button
   </button>
 
-<div class="mdc-card">
-  Simple
-</div>
+
+
+
+
+
+
+
+

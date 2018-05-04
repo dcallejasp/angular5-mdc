@@ -8,6 +8,8 @@ import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { NewComponentComponent } from './new-component/new-component.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,7 @@ import { NewComponentComponent } from './new-component/new-component.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   entryComponents: [],

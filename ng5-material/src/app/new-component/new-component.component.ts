@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   
+   }
 
   ngOnInit() {
   }
 
+
 }
+
+
 

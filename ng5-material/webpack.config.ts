@@ -17,9 +17,11 @@ module.exports = [{
                 },
                 { loader: 'extract-loader' },
                 { loader: 'css-loader' },
-                loader: 'sass-loader',
-                options: {
-                    includePaths: ['./node_modules']
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        includePaths: glob.sync('node_modules').map((d) => path.join(__dirname, d))
+                    }
                 }
             ]
         }]
